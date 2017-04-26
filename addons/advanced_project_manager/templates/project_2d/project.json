@@ -1,0 +1,24 @@
+{
+  "categories": {
+    "modes": {
+      "name": "Modes",
+      "folder": "modes"
+    },
+    "utils": {
+      "name": "Utils",
+      "folder": "modes"
+    },
+    "models": {
+      "name": "Models",
+      "folder": "models"
+    },
+    "controllers": {
+      "name": "Controllers",
+      "folder": "controllers"
+    },
+    "views": {
+      "name": "Views",
+      "folder": "views"
+    }
+  }
+}
