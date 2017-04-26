@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="27.46875"
-     inkscape:cx="37.18733"
-     inkscape:cy="487.17782"
+     inkscape:zoom="2"
+     inkscape:cx="266.42652"
+     inkscape:cy="278.42666"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="true"
@@ -60,7 +60,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -69,7 +69,7 @@
      id="layer2"
      inkscape:label="BG"
      sodipodi:insensitive="true"
-     style="display:none">
+     style="display:inline">
     <rect
        style="opacity:1;fill:#2c2a32;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4504"
@@ -102,5 +102,24 @@
        id="path4491"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <ellipse
+       ry="2.6458349"
+       rx="2.6458335"
+       cy="164.70831"
+       cx="9.5249996"
+       id="ellipse4505"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 8.4666666,165.76665 1.3229166,-1.32291 c -0.2645838,-0.26458 -0.2645838,-0.26458 -0.2645838,-0.52916 0,-0.26459 0.2645838,-0.52917 0.5291666,-0.52917"
+       id="path4507"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       sodipodi:nodetypes="cccc"
+       inkscape:connector-curvature="0"
+       id="path4509"
+       d="m 8.4666665,165.76665 1.3229167,-1.32291 c 0.2645798,0.26459 0.2645798,0.26459 0.5291588,0.26459 0.26459,0 0.52917,-0.26459 0.52917,-0.52917"
+       style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>

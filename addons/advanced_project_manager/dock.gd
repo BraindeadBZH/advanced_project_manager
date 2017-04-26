@@ -4,7 +4,9 @@ extends Control
 class Constants extends "constants.gd": func _init(): pass
 class ProjectManager extends "project_manager.gd": func _init(): pass
 
-const BTN_CATEGORY_ADD = 100
+const BTN_CATEGORY_ADD    = 100
+const BTN_PROJECT_CONFIG  = BTN_CATEGORY_ADD+1
+const BTN_CATEGORY_CONFIG = BTN_PROJECT_CONFIG+1
 
 onready var dlg_error        = get_node("dlg_error")
 
@@ -48,12 +50,14 @@ func _show_project():
 	tree_project.set_columns(2)
 	var root = tree_project.create_item()
 	root.set_text(0, "Project")
+	root.add_button(1, load(Constants.ADDON_PATH % Constants.RESOURCES_FOLDER % "icon_tools.tres"), BTN_PROJECT_CONFIG)
 	var categories = prj_manager.get_project_categories()
 	for id in categories:
 		var categ = categories[id]
 		var item = tree_project.create_item(root)
 		item.set_text(0, categ.name)
 		item.add_button(1, load(Constants.ADDON_PATH % Constants.RESOURCES_FOLDER % "icon_add.tres"), BTN_CATEGORY_ADD)
+		item.add_button(1, load(Constants.ADDON_PATH % Constants.RESOURCES_FOLDER % "icon_tools.tres"), BTN_CATEGORY_CONFIG)
 
 func _on_error_message(msg):
 	print("[ERROR] %s" % msg)
