@@ -53,11 +53,16 @@ func _show_project():
 	root.add_button(1, load(Constants.ADDON_PATH % Constants.RESOURCES_FOLDER % "icon_tools.tres"), BTN_PROJECT_CONFIG)
 	var categories = prj_manager.get_project_categories()
 	for id in categories:
-		var categ = categories[id]
-		var item = tree_project.create_item(root)
-		item.set_text(0, categ.name)
-		item.add_button(1, load(Constants.ADDON_PATH % Constants.RESOURCES_FOLDER % "icon_add.tres"), BTN_CATEGORY_ADD)
-		item.add_button(1, load(Constants.ADDON_PATH % Constants.RESOURCES_FOLDER % "icon_tools.tres"), BTN_CATEGORY_CONFIG)
+		_add_category(categories[id], root)
+
+func _add_category(categ, parent):
+	var item = tree_project.create_item(parent)
+	item.set_text(0, categ.name)
+	item.add_button(1, load(Constants.ADDON_PATH % Constants.RESOURCES_FOLDER % "icon_add.tres"), BTN_CATEGORY_ADD)
+	item.add_button(1, load(Constants.ADDON_PATH % Constants.RESOURCES_FOLDER % "icon_tools.tres"), BTN_CATEGORY_CONFIG)
+	if categ.has("categories"):
+		for id in categ.categories:
+			_add_category(categ.categories[id], item)
 
 func _on_error_message(msg):
 	print("[ERROR] %s" % msg)
