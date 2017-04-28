@@ -20,7 +20,7 @@ var project_type_index = []
 var prj_manager = ProjectManager.new()
 
 func _init():
-	prj_manager.connect("error_message", self, "_on_error_message")
+	prj_manager.connect("log_message", self, "_on_log_message")
 	prj_manager.connect("project_loaded", self, "_on_project_loaded")
 
 func _ready():
@@ -39,7 +39,6 @@ func _show_templates():
 	var templates = prj_manager.get_templates()
 	if templates == null: return
 	for id in templates:
-		print("[DEBUG] Loading template: ", id)
 		opt_project_type.add_item(templates[id].name, project_type_index.size())
 		project_type_index.append(id)
 
@@ -64,11 +63,19 @@ func _add_category(categ, parent):
 		for id in categ.categories:
 			_add_category(categ.categories[id], item)
 
-func _on_error_message(msg):
-	print("[ERROR] %s" % msg)
-	dlg_error.set_text("Error! %s" % msg)
-	dlg_error.popup_centered_minsize()
-	
+func _on_log_message(type, msg):
+	var fmt = "[%s] %s"
+	if type == Constants.MESSAGE_TYPE_DEBUG:
+		print(fmt % ["DEBUG", msg])
+	elif type == Constants.MESSAGE_TYPE_INFO:
+		print(fmt % ["INFO", msg])
+	elif type == Constants.MESSAGE_TYPE_WARNING:
+		print(fmt % ["WARNING", msg])
+	elif type == Constants.MESSAGE_TYPE_ERROR:
+		print(fmt % ["ERROR", msg])
+		dlg_error.set_text("Error! %s" % msg)
+		dlg_error.popup_centered_minsize()
+
 func _on_project_loaded():
 	_show_project()
 
