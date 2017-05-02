@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=1]
 
-[ext_resource path="res://addons/advanced_project_manager/dock.gd" type="Script" id=1]
+[ext_resource path="res://addons/advanced_project_manager/views/dock/view_dock.gd" type="Script" id=1]
 
 [node name="Project Manager" type="Control"]
 
@@ -80,7 +80,7 @@ text = "2D Project"
 flat = false
 align = 0
 selected = 0
-items = [ "2D Project", null, false, 0, null ]
+items = [ "2D Project", null, false, 3, null ]
 
 [node name="btn_create" type="Button" parent="pnl_templates/grid_main"]
 

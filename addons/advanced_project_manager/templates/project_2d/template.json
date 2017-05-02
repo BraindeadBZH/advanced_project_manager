@@ -1,0 +1,45 @@
+{
+  "main_class": "/main",
+  "categories": {
+    "modes": {
+      "name": "Modes",
+      "class_file": "abstract_mode.gd"
+    },
+    "utils": {
+      "name": "Utils",
+      "class_file": "abstract_util.gd"
+    },
+    "models": {
+      "name": "Models",
+      "class_file": "abstract_model.gd"
+    },
+    "controllers": {
+      "name": "Controllers",
+      "class_file": "abstract_controller.gd"
+    },
+    "views": {
+      "name": "Views",
+      "class_file": "abstract_view.gd",
+      "categories": {
+        "screens": {
+          "name": "Screens",
+          "class_file": "abstract_screen.gd"
+        }
+      }
+    }
+  },
+  "classes": {
+    "main": {
+      "category": "/",
+      "name": "Game",
+      "scene": "game.tscn",
+      "class_file": "game.gd"
+    },
+    "main_screen": {
+      "category": "/views/screens",
+      "name": "Main Screen",
+      "scene": "screen_main.tscn",
+      "class_file": "screen_main.gd"
+    }
+  }
+}

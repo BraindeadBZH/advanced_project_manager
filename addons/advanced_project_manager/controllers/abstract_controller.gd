@@ -1,6 +1,7 @@
-extends Node
+# class AbstractController
+extends Reference
 
-class Constants extends "constants.gd": func _init(): pass
+class Constants extends "../constants.gd": func _init(): pass
 
 signal log_message(type, msg)
 
